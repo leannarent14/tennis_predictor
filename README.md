@@ -3,7 +3,7 @@
 
 ## First Segment Table of Contents:
 1. Presentation
-    - [Overview](#Overview:)
+    - [Overview](##Overview:)
     - [Technologies Used](#Technologies:)
     - [Dataset](#Dataset:)
 2. GitHub
@@ -13,9 +13,6 @@
     - Random Forest Classifier
 4. Database
     - [Database Storage](#Database-Storage:)
-
-
-4. Begin to clean, organize, and perform exploratory data analysis on your datasets so that they're ready for analysis.
 
 
 ## Overview:
