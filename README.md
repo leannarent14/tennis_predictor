@@ -44,7 +44,10 @@ The dataset [ATP World Tour tennis data](https://datahub.io/sports-data/atp-worl
 
 ## Machine Learning Model:
 
-We were curious to see if we could create a model that could accurately predict the winner of a given match between two players, when supplied with their respective stats. For this reason, we chose to build, train, and evaluate a logistic regression model. The model will take in player features (e.g. height, weight), match-specific features (e.g. match_duration), and player stat features (e.g. aces:double_faults ratio, player1_break_points_won, player1_first_serve_in_%). With those given inputs, our model will output a probability of which player will win. 
+We were curious to see if we could create a model that could accurately predict the winner of a given match between two players, when supplied with their respective stats. For this reason, we chose to build, train, and evaluate a logistic regression model. The model will take in player features (e.g. height, weight), match-specific features (e.g. match_duration), and player stat features (e.g. aces:double_faults ratio, player1_break_points_won, player1_first_serve_in_%). Our current model is inaccurate, for there is no variance in our dataset at its current form. Our next step is introduce variance by renaming winner_ and loser_ columns to player1_ and player2_, then for each row shuffle players 1 and 2 so that the "outcome" column will have variance. Our target column, "outcome" has two possible options "1" for player 1 and "2" for player 2.
+
+Current model results:
+![first_model_results](/Images/first_model_results.png)
 
 ## Database Storage:
 
