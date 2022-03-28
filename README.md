@@ -46,10 +46,19 @@ The dataset [ATP World Tour tennis data](https://datahub.io/sports-data/atp-worl
 
 ## Machine Learning Model:
 
-We were curious to see if we could create a model that could accurately predict the winner of a given match between two players, when supplied with their respective stats. For this reason, we chose to build, train, and evaluate a logistic regression model. The model will take in player features (e.g. height, weight), match-specific features (e.g. match_duration), and player stat features (e.g. aces:double_faults ratio, player1_break_points_won, player1_first_serve_in_%). Our current model is inaccurate, for there is no variance in our dataset at its current form. Our next step is introduce variance by renaming winner_ and loser_ columns to player1_ and player2_, then for each row shuffle players 1 and 2 so that the "outcome" column will have variance. Our target column, "outcome" has two possible options "1" for player 1 and "2" for player 2.
+We are still using a logistic regression model for binary classification. We want to be able to predict the correct player winning when provided two different players along with their characterstics, match stats of current match, and career performance. Our previous model was prone to data leakage, which made us revisit data cleaning, data transformation, and feature engineering. Our latest model is able to correctly predict the right player winning 68% of the time, when given each players' win percentage prior to the match and head-to-head record (previous meetings). Currently, we are in the process of engineering more features to supply the model with. More specifically, we want to create features based on break points, first serves, and tournament surface. We believe once we have these missing features our model will be more accurate and inclusive.
 
-Current model results:
-![first_model_results](/Images/first_model_results.png)
+Previous model results:
+![ml](Images/ml/first_model_results.png)
+
+Current model results: 
+![ml](Images/ml/ml_model_performance.png)
+
+Current model features:
+![ml](Images/ml/ml_model_features.png)
+
+Current model target:
+![ml](Images/ml/ml_model_target.png)
 
 ## Database Storage:
 
