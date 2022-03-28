@@ -9,8 +9,7 @@
 2. GitHub
     - Repository
 3. Machine Learning Model
-    - Logistic Regression
-    - Random Forest Classifier
+    - [Logistic Regression](#machine-learning-model:)
 4. Database
     - [Database Storage](#Database-Storage:)
 
@@ -22,7 +21,7 @@ The purpose of this project is to build a machine learning model in order to acc
 Tennis 
 
 - Reason why we selected this topic:
-    - Tennis is a global sport and we wanted to create a dataset that over sees all tennis players’ stats from 1991-2016. We are giving an overall score of the players and predict who will win a match versus one another. We are also creating a website to interact with the audience to compare and contrast which player will win hypothetically. The dataset included players’ name, birth year, left handed or right handed, winning sets via first serve, etc. The statistical model that represents this data is logistic regression model because after combining all of players' stat, we want to predict who will win against one another purely on data. The datatypes include objects, floats, and intergers.
+    - Tennis is a global sport and we wanted to create a dataset that over sees all tennis players’ stats from 1991-2016. We are giving an overall score of the players and predict who will win a match versus one another. We are also creating a website to interact with the audience to compare and contrast which player will win hypothetically. The dataset included players’ name, birth year, left handed or right handed, winning sets via first serve, etc. The statistical model that represents this data is logistic regression model because after combining all of players' stat, we want to predict who will win against one another purely on data. The datatypes include objects, floats, and integers.
 
 - Questions to answer with the data:
 1. Do country of origin matter greatly for all players? Some countries are heavily influenced by Tennis (ex. England, Australia, France, US, Switzerland, etc.) and the country offers more opportunities for athletes interested in the sports.
@@ -42,6 +41,13 @@ Tennis
 ## Dataset:
 
 The dataset [ATP World Tour tennis data](https://datahub.io/sports-data/atp-world-tour-tennis-data#resource-match_stats_2017_unindexed) was obtained from [DataHub.io](https://datahub.io) and it contains tournaments information such as match scores, match stats, rankings and players overview.
+
+## Machine Learning Model:
+
+We were curious to see if we could create a model that could accurately predict the winner of a given match between two players, when supplied with their respective stats. For this reason, we chose to build, train, and evaluate a logistic regression model. The model will take in player features (e.g. height, weight), match-specific features (e.g. match_duration), and player stat features (e.g. aces:double_faults ratio, player1_break_points_won, player1_first_serve_in_%). Our current model is inaccurate, for there is no variance in our dataset at its current form. Our next step is introduce variance by renaming winner_ and loser_ columns to player1_ and player2_, then for each row shuffle players 1 and 2 so that the "outcome" column will have variance. Our target column, "outcome" has two possible options "1" for player 1 and "2" for player 2.
+
+Current model results:
+![first_model_results](/Images/first_model_results.png)
 
 ## Database Storage:
 
