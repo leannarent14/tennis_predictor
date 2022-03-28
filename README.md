@@ -1,7 +1,7 @@
 # Tennis Predictor
 ![](/Images/tennis_readme.png)
 
-## First Segment Table of Contents:
+## Table of Contents:
 1. Presentation
     - [Overview](##Overview:)
     - [Technologies Used](#Technologies:)
@@ -36,7 +36,9 @@ Tennis
 
 - Relational Database: `postgreSQL` 
 
-- Object Relational Mapper: `SQLAlchemy` 
+- Object Relational Mapper: `SQLAlchemy`
+
+- Visualization: `Tableau`, `JavaScript`, `D3.js`, `HTML` 
 
 ## Dataset:
 
@@ -51,7 +53,23 @@ Current model results:
 
 ## Database Storage:
 
-![postgres](/Images/postgres.png)
+After cleaning the DataFrames with Python, we made a connection to `postgreSQL` using `SQLAlchemy`. Below are the tables loaded into `postgreSQL`, the ERD, and a joined table. 
+
+
+1) match_scores table
+![postgres](Images/postgres/1_match_scores_table.png)
+
+2) players_overview table
+![postgres](Images/postgres/2_players_overview_table.png)
+
+3) rankings_overview table
+![postgres](Images/postgres/3_rankings_overview_table.png)
+
+4) ERD
+![](Images/ERD.png)
+
+5) Inner Join: `players_overview` and `rankings_overview` on `player_id`
+![postgres](Images/postgres/4_join_players_rankings.png)
 
 ## Team Members:
 - Theodoric Tran
