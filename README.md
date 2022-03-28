@@ -58,6 +58,7 @@ Current model features:
 ![ml](Images/ml/ml_model_features.png)
 
 Current model target:
+
 ![ml](Images/ml/ml_model_target.png)
 
 ## Database Storage:
