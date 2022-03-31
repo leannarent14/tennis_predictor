@@ -27,7 +27,7 @@ function buildTable(data) {
 
   function handleClick() {
     // Grab the 'hand' value from the filter
-    let hand = d3.select("#hand").property("value");
+    let hand = d3.select("hand").property("value");
     let filteredData = tableData;
   
      // Check to see if a hand was entered and filter the
