@@ -1,5 +1,5 @@
 // import the data from players.js
-const tableData = atp_players;
+const tableData = jsonData;
 
 // Reference the HTML table using d3
 var tbody = d3.select("tbody");
@@ -27,7 +27,7 @@ function buildTable(data) {
 
   function handleClick() {
     // Grab the 'hand' value from the filter
-    let hand = d3.select("hand").property("value");
+    let hand = d3.select("players").property("value");
     let filteredData = tableData;
   
      // Check to see if a hand was entered and filter the
