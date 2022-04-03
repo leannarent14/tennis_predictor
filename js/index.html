@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Tennis Match Predictor</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+
+<body class="w3-black">
+<div class="w3-padding-large" id="main">
+  <!-- Header -->
+  <header class="w3-display-container w3-content w3-center" style="max-width:1200px">
+    <img class="w3-image" src="../Images/option2.png" alt="Me" width="1800" height="700">
+    <div class="w3-display-middle w3-padding-large w3-wide w3-text-light-grey w3-center">
+      <h1 class="w3-hide-medium w3-hide-small w3-xxxlarge">TENNIS MATCH PREDICTOR</h1>
+      <h3 class="w3-hide-medium w3-hide-small">ATP World Tour tennis data</h3>
+    </div>
+  </header>
+  <br/>
+  <br/>
+  <br/>
+  <!-- Player Selection -->
+  <div class="w3-container w3-content w3-center">
+    <div class="bg-dark">
+      <h2>Select Player:</h2>
+      <select id="selDataset" onchange="playerChanged(this.value)"></select>
+    </div>
+    <br/>
+    <hr style="width:100px w3-center" class="w3-opacity">
+    <!-- Player Selection -->
+    <div class="panel panel-primary">
+      <h2 class="panel-title w3-text-light-grey">Player Overview:</h2>
+      <!-- <div> with an id of sample-data -->
+      <div id="sample-data" class="panel-body">
+      <h6>Information will show here</h6>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="tennis.js"></script>
+  <script src="players.json"></script>
+
+</body>
+
+</html>
