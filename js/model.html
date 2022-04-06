@@ -5,10 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Tennis Match Predictor</title>
+  <title>Model</title>
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 
 
@@ -53,35 +52,22 @@
   <header class="w3-display-container w3-content w3-center" style="max-width:1200px">
     <img class="w3-image" src="Images/option3.png" alt="Me" width="1800" height="700">
     <div class="w3-display-middle w3-padding-large w3-wide w3-text-light-grey w3-center">
-      <h1 class="w3-hide-medium w3-hide-small w3-xxxlarge">TENNIS MATCH PREDICTOR</h1>
+      <h1 class="w3-hide-medium w3-hide-small w3-xxxlarge">PROJECT OVERVIEW</h1>
       <h3 class="w3-hide-medium w3-hide-small">ATP World Tour tennis data</h3>
     </div>
   </header>
 <br/>
 <br/>
 <br/>
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-md-3">
-      <h1 class="text-left mb-3 text-light-grey">Select Player</h1>
-      <ul class="list-group">
-      <li class="list-group-item">
-        <input class="form-control form-control-lg" id="search" type="text" placeholder="Enter Player Name" />
-      </li> 
-      <div id="match-list"></div>
-      </ul>
-      <br/>
-  <!-- Player Selection -->
-  <div class="panel panel-primary">
-    <h2 class="panel-title w3-text-dark-grey">Player Overview</h2>
-    <div id="sample-data" class="panel-body">
-      <h6>Information will show here</h6>
+<!-- First Section: Project Overview -->
+<div class="w3-main" style="margin-left:250px">
+    <div class="w3-row w3-padding-64">
+      <div class="w3-twothird w3-container">
+        <h1 class="w3-text-dark-grey">Logistic Regression</h1>
+        <p>Binary classification was used since we wanted to create a model that could predict <br>
+            the correct player winning when given player characteristics, match stats, and player career performance. </p>
+      </div>
     </div>
-  </div>
-    </div>
-  </div>
-</div>
-  
   
   <script src="js/tennis2.js"></script>
   <script src="js/players.json"></script>
