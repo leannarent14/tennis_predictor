@@ -81,7 +81,7 @@ After cleaning the DataFrames with Python, we made a connection to `postgreSQL` 
 ![postgres](Images/postgres/3_rankings_overview_table.png)
 
 4) ERD
-![](Images/ERD.png)
+![](Images/1_new_ERD.png)
 
 5) Inner Join: `players_overview` and `rankings_overview` on `player_id`
 ![postgres](Images/postgres/4_join_players_rankings.png)

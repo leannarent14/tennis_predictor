@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tennis Player's Handedness</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="index.html">Handedness</a>
+
+        </nav>
+        <div class="jumbotron">
+            <h1>Game, Set, Match!</h1>
+          </div>
+        
+    </div>
+
+    
+
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-3">
+            <p>Filter Search</p>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <label for="First Name">Enter First Name</label>
+                    <input class="form-control" id="name_first" type="text" placeholder="First Name" />
+                </li>
+                <li class="list-group-item">
+                    <label for="Last Name">Enter Last Name</label>
+                    <input class="form-control" id="name_last" type="text" placeholder="Last Name" />
+                </li>
+                <li class="list-group-item">
+                    <label for="Hand">Enter Hand</label>
+                    <input class="form-control" id="hand" type="text" placeholder="Left" />
+                </li>
+                <li class="list-group-item">
+                    <label for="ioc">Enter Country</label>
+                    <input class="form-control" id="ioc" type="text" placeholder="USA" />
+                </li>
+                <li class="btn btn-dark" style="font-family: inherit; font-size: 1rem;">
+                    <button id="filter-btn" type="button" class="btn btn-dark">
+                        Filter Table
+                    </button>
+                </li>
+            </ul>
+
+          </div>
+          <div class="col-md-9">
+              <table class="table table-hover">
+                  <thread>
+                      <tr>
+                          <th>First Name</th>
+                          <th>Last Name</th>
+                          <th>Hand</th>
+                          <th>ioc</th>
+                      </tr>
+                  </thread>
+                  <tbody>
+
+                  </tbody>
+              </table>
+
+          </div>
+        </div>
+      </div>
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+      <script src="players.js"></script>
+      <script src="app.js"></script>    
+
+
+</body>
+</html>
