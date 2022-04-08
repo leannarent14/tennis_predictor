@@ -69,7 +69,7 @@ Feature Engineering and Feature Selection:
 
 Model Choice:
 - We are trying to predict in a given match who would win player_1 or player_2 which falls under a classification problem. To do so, we have chosen a logistic regression model because it fit our needs and it was easy to implement and interpret. A drawback of the logistic regression model is that it can over-fit the training set. 
-- With nearly 96,000 matches covering 1991 to 2017, the data was split 70/30. 70% of the data becaming the training set while the remaining 30% became the testing set.
+- With nearly 92,000 matches covering 1991 to 2017, the data was split 80/20. 80% of the data becaming the training set while the remaining 20% became the testing set.
 - Since our previous model, we added additional features and did not change the model. We ran the model using Grid Search to find the optimal parameters. We found players' win percentages were the most influential, followed by break points saved percentages. Players' head-to-head records were the least influential on match outcome.
 - Our current model f1-score is 68% meaning it can predict the correct winner nearly 7 times out of 10 which is better than 50/50 odds. From our previous model to our current model, the addition of new features did yield any signficant improvements over the prior model, yet the latest model factors in performance categories that we were interested in. Our current model tells that break points do matter, but not nearly as much as win percentages do.
 
