@@ -15,6 +15,8 @@
 
 Link to presentation: https://docs.google.com/presentation/d/1Ls3NwU10uxvZovScrWnc-1DtVh1fgiCA2dgChteHuOM/edit?usp=sharing
 
+Link to Tableau: https://public.tableau.com/app/profile/julie4612/viz/FinalProject-Tennis/Story1
+
 
 ## Overview:
 The purpose of this project is to create a machine learning model to accurately predicts the winner of a match on the Association of Tennis Professionals (ATP) Tour.
