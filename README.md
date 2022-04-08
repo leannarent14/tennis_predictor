@@ -26,13 +26,11 @@ Tennis
     - Tennis is a global sport and we are giving an overall score of the players and predict who will win a match versus one another. We are also creating a website to interact with the audience to compare and contrast which player will win hypothetically. The dataset included players’ name, birth year, left handed or right handed, winning sets via first serve, etc. The statistical model that represents this data is logistic regression model because after combining all of players' stat, we want to predict who will win against one another purely on data. The datatypes include objects, floats, and integers.
 
 - Questions to answer with the data:
-1. Which country has the most winners?
-
-2. Which hand (left or right handed) has the highest winning percentage?
-
-3. Does tennis court surface impact players’ performance?
-
-4. How influential are break points on match outcome?
+1)  Can our model accurately predict the winners of ATP matches?
+2)  Which hand (left or right handed) has the highest winning percentage?
+3) 	What tennis surface is played the most?
+4) 	What is the average age of most wins in tennis?
+5)	Which country has the most winners?
 
 
 
