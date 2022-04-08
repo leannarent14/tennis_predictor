@@ -13,6 +13,8 @@
 4. Database
     - [Database Storage](#Database-Storage:)
 
+Link to presentation: https://docs.google.com/presentation/d/1Ls3NwU10uxvZovScrWnc-1DtVh1fgiCA2dgChteHuOM/edit?usp=sharing
+
 
 ## Overview:
 The purpose of this project is to build a machine learning model in order to accurately predict the outcome of tennis matches.
@@ -46,25 +48,55 @@ The dataset [ATP World Tour tennis data](https://datahub.io/sports-data/atp-worl
 
 ## Machine Learning Model:
 
-We are still using a logistic regression model for binary classification. We want to be able to predict the correct player winning when provided two different players along with their characterstics, match stats of current match, and career performance. Our previous model was prone to data leakage, which made us revisit data cleaning, data transformation, and feature engineering. Our latest model is able to correctly predict the right player winning 68% of the time, when given each players' win percentage prior to the match and head-to-head record (previous meetings). Currently, we are in the process of engineering more features to supply the model with. More specifically, we want to create features based on break points, first serves, and tournament surface. We believe once we have these missing features our model will be more accurate and inclusive.
+Data Preprocessing:
+- After merging datasets related to stats and scores, we have a dataframe containing all matches played from 1991 to 2017 that include information about who won, each player's performance, and score. We have 95,773 matches and 76 columns of information to use. We were missing information on dates of the matches. To fill in the dates, we took a dataset containing tournament information (i.e. date tournament took place, tournament name), changed tournament_date to datetime data type and merged it to our stats_scores dataframe containing all the matches and stats. Looking at the columns available and questions we wanted to answer, we were interested in specific point categories for each player. 
+- Columns: ![ml](Images/ml/columns.png)
 
-Previous model results:
-![ml](Images/ml/first_model_results.png)
+Feature Engineering and Feature Selection:
+- To predict the winner without the data being tied to the known winner or loser, a function was created to replace 'winner_' and 'loser_' with 'player_1' and 'player_2' while 'player_1' was assigned to whoever alphabetically came first. We took all their attributes and stats as well.
+- We engineered a number of features: 
+    - Players' head-to-head wins against each other prior to match
+    - Players' overall win percentage prior to match
+    - Players' overall first serve in percentage prior to match
+    - Players' overall break point saved percentage prior to match
+    - Players' overall break point converted percentage prior to match
+- For performance categories, we were particularlly interested in seeing how first serve percentages, break points saved percentages, and break points converted percentages influenced the outcome of a match because one break of serve is needed in a set to win the set while it is assumed that all players should maintain their serve (not be broken). 
+- Break points can be thought of as pressure points. High break points saved percentages can indicate how well a server performs while under pressure as high break points converted percentages can indicate how well the returner applies pressure to the server.
+- The target column would be either Player 1 or Player 2 indicating which player won.
 
-Current model results: 
+Model Choice:
+- We are trying to predict in a given match who would win player_1 or player_2 which falls under a classification problem. To do so, we have chosen a logistic regression model because it fit our needs and it was easy to implement and interpret. A drawback of the logistic regression model is that it can over-fit the training set. 
+- With nearly 96,000 matches covering 1991 to 2017, the data was split 70/30. 70% of the data becaming the training set while the remaining 30% became the testing set.
+- Since our previous model, we added additional features and did not change the model. We ran the model using Grid Search to find the optimal parameters. We found players' win percentages were the most influential, followed by break points saved percentages. Players' head-to-head records were the least influential on match outcome.
+- Our current model f1-score is 68% meaning it can predict the correct winner nearly 7 times out of 10 which is better than 50/50 odds. From our previous model to our current model, the addition of new features did yield any signficant improvements over the prior model, yet the latest model factors in performance categories that we were interested in. Our current model tells that break points do matter, but not nearly as much as win percentages do.
+
+Current Accuracy Score:
+![ml](Images/ml/recent_model_perf.png)
+
+Grid Search Results:
+![ml](Images/ml/GridSearchResults.png)
+
+Feature Importances
+![ml](Images/ml/feature_importance.png)
+
+The features used and the target column: 
+![ml](Images/ml/features_used.png)
+
+Previous model results: 
 ![ml](Images/ml/ml_model_performance.png)
 
-Current model features:
+Previous model features:
 ![ml](Images/ml/ml_model_features.png)
 
-Current model target:
-
+Previous model target:
 ![ml](Images/ml/ml_model_target.png)
+
+Initial model results:
+![ml](Images/ml/first_model_results.png)
 
 ## Database Storage:
 
 After cleaning the DataFrames with Python, we made a connection to `postgreSQL` using `SQLAlchemy`. Below are the tables loaded into `postgreSQL`, the ERD, and a joined table. 
-
 
 1) match_scores table
 ![postgres](Images/postgres/1_match_scores_table.png)
@@ -86,7 +118,3 @@ After cleaning the DataFrames with Python, we made a connection to `postgreSQL` 
 - Julieta Hernandez
 - John Lee
 - Leanna Renteria
-
-## Communication Protocols
-- ZOOM
-- Slack
